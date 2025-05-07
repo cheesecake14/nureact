@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #32418C; /* NU Blue */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Rating Container */
+.rating-container, .auth-container {
+    background: white;
+    color: #32418C;
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Titles */
+h1 {
+    color: #32418C;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    font-weight: 600;
+    margin: 15px 0 6px;
+    text-align: left;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 15px 0;
+    font-size: 32px;
+}
+
+.star {
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.star.selected {
+    color: #FBD117; /* NU Gold */
+}
+
+/* Submit & Auth Buttons */
+.submit-btn, .auth-btn {
+    width: 100%;
+    padding: 14px;
+    background: #FBD117;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover, .auth-btn:hover {
+    background: #e0b800;
+}
+
+/* Error Messages */
+.error-message {
+    text-align: center;
+    color: red;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+/* Authentication Form */
+.auth-container input {
+    margin: 12px 0;
+}
+
+/* Links */
+p {
+    margin-top: 12px;
+}
+
+p a {
+    color: #FBD117;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .rating-container, .auth-container {
+        width: 90%;
+        padding: 25px;
+    }
+}
