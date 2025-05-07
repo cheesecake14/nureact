@@ -23,7 +23,8 @@ $email = $data["email"] ?? "";
 $password = $data["password"] ?? "";
 
 // Database connection
-$conn = new mysqli("localhost", "root", "", "facility_management");
+$conn = new mysqli("sql213.infinityfree.com
+", "if0_38923840", "EpLx5unbWe1p", "if0_38923840_facility_management");
 
 if ($conn->connect_error) {
   echo json_encode(["success" => false, "message" => "Connection failed"]);
