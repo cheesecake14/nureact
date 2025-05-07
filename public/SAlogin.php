@@ -1,8 +1,14 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: https://sparkly-croquembouche-f1782d.netlify.app");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type");
-header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Max-Age: 86400"); // Cache preflight response for 1 day
+
+// Handle preflight OPTIONS request
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    exit(0);
+}
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);

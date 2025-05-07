@@ -1,8 +1,11 @@
-# Use official PHP image with Apache
+# Use the official PHP image with Apache
 FROM php:8.2-apache
 
 # Enable Apache mod_rewrite (optional, but often useful)
 RUN a2enmod rewrite
+
+# Install necessary PHP extensions
+RUN docker-php-ext-install mysqli
 
 # Set working directory
 WORKDIR /var/www/html
